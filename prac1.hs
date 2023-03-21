@@ -1,9 +1,11 @@
---Practica 1 
---Ejercicio 8 
+--Practice 1 
+--Exercise 8 
 
-lsdigitos:: Int -> [Int]
-lsdigitos 0 = []
-lsdigitos x = (mod x 10) : lsdigitos (div x 10)
+--"Function that takes a certain number and turns it into a list of its digits (in reverse order)."
+lsdigits:: Int -> [Int]
+lsdigits 0 = []
+lsdigits x = (mod x 10) : lsdigits (div x 10)
 
+--This function reverts the list taken from lsdigitos output.
 ej8 :: Int -> [Int]
-ej8 xs = reverse (lsdigitos xs)
+ej8 xs = reverse (lsdigits xs)
