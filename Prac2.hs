@@ -1,23 +1,24 @@
--- Ejercicio 2 de Programacion avanzada
+--Course: Programacion Avanzada
+--Exercises from practice work nº2
 
---Funcion analoga a head
+--hd is an analogous function to head
 hd:: [a] -> a
 hd [] = error "Lista vacia"
 hd (x:xs) = x
 
---Funcion analoga a tail 
+--tl is an analogous function to tail 
 tl:: [a] -> [a]
 tl [] = error "Lista vacia"
 tl [x] = [x]
 tl (x:xs) = xs
 
---Funcion que devuelve el ultimo elemento
+--lst returns the last element in the list.(Analogous to last)
 lst:: [a] -> a
 lst [] = error "Lista Vacia"
 lst [x] = x
 lst (x:xs) = lst (xs)
 
---Funcion que retorna todos los elementos menos el ultimo
+--inic returns a given list but the last element.(Analogous to init)
 inic:: [a]->[a]
 inic [] = []
 inic [x] = []
@@ -25,7 +26,7 @@ inic (x:xs) = x: inic (xs)
 
 -- EJERCICIO 3--
 
---Funcion maximo de 3 elementos
+--maxTres returns the largest of three given numbers
 maxTres:: Int -> Int -> Int -> Int
 maxTres x y z = max x (max y z) 
 
