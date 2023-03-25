@@ -41,10 +41,31 @@ concaten   []  xs = xs
 concaten   (x:xs) ys = x : concaten xs ys
 
 
---tkn Given a list and a number, returns the list of the first n elemnts. 
+--tkn Given a list and a number, returns the list of the first n elements. 
 
-tkn:: [a] -> num -> [a]
-tkn xs 0 = []
-tkn [] n = []
-tkn (x:xs) n= x: tkn xs (n-1)
+tkn:: Int -> [a] -> [a]
+tkn 0 xs  = []
+tkn n []  = []
+tkn n (x:xs) = x: tkn (n-1) xs 
+
+--drp Given a list and a number, takes out the last n elements. 
+drp:: Int -> [a] -> [a]
+drp 0 xs = xs
+drp n [] = []
+drp n (x:xs) = drp (n-1) xs 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
