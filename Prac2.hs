@@ -1,6 +1,8 @@
 --Course: Programacion Avanzada
 --Exercises from practice work nº2
 
+----------EXERCISE Nº2 --------------
+
 --hd is an analogous function to head
 hd:: [a] -> a
 hd [] = error "Empty list"
@@ -24,9 +26,25 @@ inic [] = []
 inic [x] = []
 inic (x:xs) = x: inic (xs)
 
--- EJERCICIO 3--
+----------EXERCISE Nº3 --------------
 
---maxOfThree returns the largest of three given numbers
+--maxOfThree returns the largest of three numbers.
 maxOfThree:: Int -> Int -> Int -> Int
 maxOfThree x y z = max x (max y z) 
+
+----------EXERCISE Nº3 --------------
+
+--concaten concatenates two lists of strings. 
+
+concaten:: [a] -> [a] -> [a]
+concaten   []  xs = xs
+concaten   (x:xs) ys = x : concaten xs ys
+
+
+--tkn Given a list and a number, returns the list of the first n elemnts. 
+
+tkn:: [a] -> num -> [a]
+tkn xs 0 = []
+tkn [] n = []
+tkn (x:xs) n= x: tkn xs (n-1)
 
