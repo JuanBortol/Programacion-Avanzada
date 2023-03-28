@@ -73,10 +73,19 @@ lp a = ((mod a 400 == 0) || (mod a 100 /=0)) && (mod a 4 == 0)
    
 
 --years calculates years passed between two dates
---years:: (Nat,Nat,Nat) -> (Nat,Nat,Nat) -> Int
---years d m y = 
+years:: (Int,Int,Int) -> (Int,Int,Int) -> Int
+years (d1,m1,y1)   (d2,m2,y2)  | m2<m1 = y2-y1-1
+                               | m2>m1 = y2-y1 
+                               | m2 == m1 && d2>d1 = y2-y1-1
+                               |otherwise = y2-y1-1
 
 
+----------EXERCISE Nº7 --------------
+
+-- Xor Implementation
+
+xor :: Bool -> Bool -> Bool 
+xor a b = (not a && b) || (a && not b)
 
 
 
