@@ -32,7 +32,7 @@ inic (x:xs) = x: inic (xs)
 maxOfThree:: Int -> Int -> Int -> Int
 maxOfThree x y z = max x (max y z) 
 
-----------EXERCISE Nº3 --------------
+----------EXERCISE Nº4 --------------
 
 --concaten concatenates two lists of strings. 
 
@@ -54,15 +54,27 @@ drp 0 xs = xs
 drp n [] = []
 drp n (x:xs) = drp (n-1) xs 
 
+--addright adds an element 
+addright:: a -> [a] ->[a]
+addright x [] = [x]
+addright y (x:xs) = x : addright y xs
 
+----------EXERCISE Nº5 --------------
+-- abst returns the absolute value of a number
+abst:: Int -> Int
+abst a | a>=0 = a
+       | otherwise = -a
 
+----------EXERCISE Nº6 --------------
 
+--lp telss if a year is a leap year or not
+lp:: Int -> Bool
+lp a = ((mod a 400 == 0) || (mod a 100 /=0)) && (mod a 4 == 0) 
+   
 
-
-
-
-
-
+--years calculates years passed between two dates
+--years:: (Nat,Nat,Nat) -> (Nat,Nat,Nat) -> Int
+--years d m y = 
 
 
 
