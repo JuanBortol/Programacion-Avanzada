@@ -81,11 +81,18 @@ years (d1,m1,y1)   (d2,m2,y2)  | m2<m1 = y2-y1-1
 
 
 ----------EXERCISE Nº7 --------------
+xor :: Bool -> Bool -> Bool
+xor True False  = True    
+    False True = True
+    True True = False
+    False False = False
+        
 
--- Xor Implementation
+-- Xor2 Implementation
+xor2 :: Bool -> Bool -> Bool 
+xor2 a b = (not a && b) || (a && not b)
 
-xor :: Bool -> Bool -> Bool 
-xor a b = (not a && b) || (a && not b)
+
 
 
 
