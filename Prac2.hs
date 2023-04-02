@@ -82,18 +82,25 @@ years (d1,m1,y1)   (d2,m2,y2)  | m2<m1 = y2-y1-1
 
 ----------EXERCISE Nº7 --------------
 xor :: Bool -> Bool -> Bool
-xor True False  = True    
-    False True = True
-    True True = False
-    False False = False
+xor True   False = True    
+xor False  True  = True
+xor True   True  = False
+xor False  False = False
         
 
 -- Xor2 Implementation
 xor2 :: Bool -> Bool -> Bool 
 xor2 a b = (not a && b) || (a && not b)
 
+----------EXERCISE Nº8 --------------
+-- Decides whether a number is prime or not
+isItPrime :: (Num a, Integral a) => a -> Bool
+isItPrime a = length [x | x <- [2..floor(sqrt(fromIntegral a))], mod a x == 0] == 0 && a > 1
 
-
+----------EXERCISE Nº9 --------------
+--returns the list of the first n prime numbers
+nprimes:: Int -> [Int]
+nprimes n = [x|x <- [2..n], isItPrime x]
 
 
 
