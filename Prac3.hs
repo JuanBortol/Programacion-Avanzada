@@ -48,11 +48,11 @@ addright x [] = [x]
 addright y (x:xs) = x : addright y xs
 
 
---Given a number convert it to its binary equivalent 
-decToBin :: Int -> Int
+--Given a number convert it to a list of its binary representation
+decToBin :: Int -> [Int]
 decToBin a | a == 0    = [0]
            | a == 1    = [1]
-           | otherwise = mod a 2 + 10 * (decToBin (div a 2))
+           | otherwise = addright (mod a 2) (decToBin (div a 2))
 
 
 
