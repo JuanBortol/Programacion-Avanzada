@@ -67,7 +67,7 @@ abst a | a>=0 = a
 
 ----------EXERCISE Nº6 --------------
 
---lp telss if a year is a leap year or not
+--lp tells if a year is a leap year or not
 lp:: Int -> Bool
 lp a = ((mod a 400 == 0) || (mod a 100 /=0)) && (mod a 4 == 0) 
    
